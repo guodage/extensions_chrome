@@ -1,0 +1,16 @@
+﻿{
+	"manifest_version": 2,
+	"name": "audio helper",
+	"version": "0.0.1",
+	"background": { "scripts": ["jquery-2.0.0.min.js", "background.js"] },
+	"page_action": {
+		"default_icon": "icon_audio.png",
+		"default_title": "微信公众号语音助手", // shown in tooltip
+		"default_popup": "popup.html"
+	},
+	"permissions" : ["tabs"],
+	"content_scripts":[{
+		"matches":["https://mp.weixin.qq.com/*"],
+		"js":["jquery-2.0.0.min.js", "content_script.js"]
+	}]
+}
